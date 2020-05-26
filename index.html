@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:700|Raleway:300,400,600,700&display=swap"" rel="stylesheet"> 
+  <title>TopGames</title>
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/Favicons-2/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/Favicons-2/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/Favicons-2/favicon-16x16.png">
+  <link rel="manifest" href="images/Favicons-2/site.webmanifest">
+  <link rel="mask-icon" href="images/Favicons-2/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Sprite -->
+  <svg style="display: none;">
+    <symbol id='facebook' viewBox="0 0 430.113 430.114">
+            <g>
+                    <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+                        c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
+                        c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z"/>
+                </g>
+    </symbol>
+
+    <symbol id="twitter" viewBox="0 0 512 512">
+        <g>
+                <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                C480.224,136.96,497.728,118.496,512,97.248z"/>
+            </g>
+    </symbol>
+
+    <symbol id="linkedin" viewBox="0 0 512 512">
+        <g>
+                <path d="m475.074219 0h-438.148438c-20.394531 0-36.925781 16.53125-36.925781 36.925781v438.148438c0 20.394531 16.53125 36.925781 36.925781 36.925781h438.148438c20.394531 0 36.925781-16.53125 36.925781-36.925781v-438.148438c0-20.394531-16.53125-36.925781-36.925781-36.925781zm-293.464844 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0"/>
+        </g>
+    </symbol>
+
+    <symbol id='epicgames' viewBox="0 0 309.9 359.6">
+      <g>
+              <path class="logosvg.com_1_" class="st0" d="M132.8,117.9h-8.5V67.8h8.5c5.2,0,7.7,2.5,7.7,8V110C140.5,115.4,138,117.9,132.8,117.9z
+              M109.4,243.5h0.6h0.6h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5
+             l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5
+             l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5
+             l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5h0.6H109.4z
+              M307.9,30.1v245c0,2.3-0.1,4.4-0.3,6.4c-0.5,4.4-0.5,8.7-4.7,13.6c-0.4,0.5-4.6,3.6-4.6,3.6c-2.3,1.1-3.8,1.9-6.4,3l-123.3,51.7
+             c-6.4,2.9-9.1,4.1-13.7,4v0c0,0,0,0,0,0c0,0,0,0,0,0v0c-4.6,0.1-7.3-1.1-13.7-4L17.9,301.7c-2.6-1-4.1-1.8-6.4-3
+             c0,0-4.2-3.1-4.6-3.6c-4.1-4.9-4.2-9.2-4.7-13.6c-0.2-2-0.3-4.1-0.3-6.4v-245C2,9.8,9.5,2.3,29.8,2.3h250.4
+             C300.4,2.3,307.9,9.8,307.9,30.1z M170.6,185.6h20.7V49.5h-20.7V185.6z M161.3,234l-0.3-0.5l-0.3-0.5l-0.3-0.4l-0.3-0.5l-0.3-0.5
+             l-0.3-0.5l-0.3-0.5l-0.3-0.4l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5
+             l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.4l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.4l-0.3-0.5l-0.3-0.5h-0.6h-0.6
+             h-0.5h-0.6h-0.6h-0.6h-0.5h-0.6h-0.6h-0.6h-0.5h-0.6h-0.6h-0.6h-0.5h-0.6h-0.6H142h-0.5h-0.6h-0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6
+             v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.5v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6
+             v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.5v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6
+             v0.6v0.6v0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6
+             v-0.6v-0.6v-0.6v-0.5v-0.6v-0.6V252v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6V247v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6V243v-0.6v-0.6v-0.5
+             v-0.6v-0.6v-0.6v-0.6v-0.6V238v-0.6v-0.6v-0.6v-0.6l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5
+             l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5
+             l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5h0.2l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5
+             l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5
+             l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5v0.6
+             v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6
+             v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6v-0.6
+             v-0.6v-0.6v-0.6v-0.6v-0.6V256v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6V252v-0.6v-0.6v-0.6v-0.6v-0.5v-0.6v-0.6v-0.6V247v-0.6v-0.6v-0.6v-0.6
+             v-0.6v-0.6V243v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6V234v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6V230
+             v-0.6v-0.5v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6V225v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6V221v-0.6v-0.6v-0.6v-0.6h-0.6h-0.6h-0.5h-0.6h-0.6
+             h-0.6h-0.5H179h-0.6h-0.6h-0.5h-0.6h-0.6h-0.6h-0.5h-0.6H174h-0.6H173h-0.6h-0.6l-0.3,0.5l-0.3,0.5l-0.3,0.4l-0.3,0.5l-0.3,0.5
+             l-0.3,0.5l-0.3,0.4l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5L168,225l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5
+             l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.4l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5L163,233l-0.3,0.5l-0.3,0.5l-0.3,0.5
+             l-0.3,0.5l-0.3-0.5L161.3,234z M103.6,185.6h20.7v-49.4h11.8c16.8,0,25.2-8.4,25.2-25.3V74.8c0-16.9-8.3-25.3-25.2-25.3h-32.5V185.6
+             z M47.1,185.6h46.4v-18.9H67.8v-41h24.4v-18.9H67.8V68.4h25.4V49.5H47.1V185.6z M86.3,236h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6
+             h-0.6h-0.6h-0.6h-0.6H79h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6H70h-0.6h-0.6h-0.6h-0.6v0.6
+             v0.5v0.6v0.6v0.6v0.5v0.6v0.6v0.6v0.5v0.6v0.6v0.6v0.5v0.6h0.6h0.5h0.6h0.6h0.6H71h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.5H76v0.6v0.6v0.6
+             v0.6v0.6v0.6v0.6v0.6v0.6l-0.4,0.3l-0.4,0.2l-0.5,0.2l-0.5,0.2l-0.5,0.2l-0.5,0.1l-0.6,0.2l-0.6,0.1l-0.6,0.1l-0.6,0.1l-0.6,0.1
+             l-0.6,0.1H69h-0.6l-0.6-0.1l-0.6-0.1l-0.6-0.1l-0.6-0.1l-0.6-0.2l-0.6-0.2l-0.5-0.2l-0.5-0.2l-0.5-0.2l-0.5-0.3l-0.4-0.3l-0.4-0.3
+             l-0.5-0.3l-0.4-0.3l-0.3-0.4l-0.4-0.4l-0.3-0.4l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.1-0.5
+             l-0.1-0.5l-0.1-0.5l-0.1-0.6l-0.1-0.5l-0.1-0.6v-0.6v-0.1v-0.6l0.1-0.6l0.1-0.6l0.1-0.6l0.1-0.5l0.1-0.6l0.2-0.6l0.2-0.5l0.2-0.5
+             l0.2-0.5l0.3-0.5l0.3-0.5l0.3-0.5L60,232l0.3-0.5l0.4-0.4l0.3-0.4l0.4-0.3l0.4-0.3l0.4-0.3l0.5-0.3l0.4-0.3l0.5-0.3l0.5-0.2l0.5-0.2
+             l0.5-0.2l0.5-0.2l0.5-0.1l0.6-0.1l0.5-0.1l0.6-0.1h0.6H69l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.5,0.1l0.5,0.2l0.5,0.2l0.5,0.2
+             l0.4,0.2l0.5,0.2l0.5,0.3l0.4,0.3l0.5,0.3l0.4,0.3l0.4,0.3l0.5,0.3l0.4,0.4l0.5,0.3l0.3-0.5l0.4-0.4l0.3-0.5l0.4-0.5l0.3-0.5
+             l0.3-0.4l0.4-0.5l0.3-0.5l0.4-0.5l0.3-0.4l0.3-0.5l0.4-0.5l0.3-0.4l0.3-0.5l0.4-0.5l0.3-0.5l0.4-0.4l0.3-0.5l-0.4-0.3l-0.5-0.4
+             l-0.4-0.3l-0.5-0.3l-0.4-0.3l-0.4-0.3l-0.5-0.3l-0.4-0.3l-0.5-0.3l-0.5-0.3l-0.5-0.2l-0.5-0.3l-0.5-0.2l-0.5-0.2l-0.5-0.2l-0.5-0.2
+             l-0.4-0.2l-0.5-0.1l-0.5-0.2l-0.5-0.1l-0.5-0.1l-0.5-0.1l-0.6-0.1l-0.6-0.1l-0.5-0.1l-0.6-0.1l-0.6-0.1h-0.6l-0.6-0.1l-0.6-0.1H69
+             h-0.6h-0.6h-0.6l-0.6,0.1l-0.6,0.1l-0.6,0.1l-0.6,0.1l-0.6,0.1l-0.6,0.1l-0.6,0.1l-0.5,0.2l-0.6,0.1l-0.5,0.2l-0.5,0.1l-0.5,0.2
+             l-0.6,0.2l-0.4,0.2l-0.6,0.3l-0.5,0.2l-0.5,0.2l-0.5,0.3l-0.5,0.3l-0.5,0.3l-0.4,0.3l-0.5,0.3l-0.4,0.3l-0.5,0.3l-0.4,0.3l-0.4,0.3
+             l-0.5,0.4l-0.4,0.3l-0.4,0.4l-0.4,0.4L52,225l-0.4,0.4l-0.3,0.4l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5
+             l-0.3,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.1,0.6l-0.2,0.6l-0.1,0.5l-0.1,0.6l-0.1,0.6
+             l-0.1,0.6l-0.1,0.6v0.6l-0.1,0.6v0.6v0.1v0.6v0.6l0.1,0.6l0.1,0.6l0.1,0.6l0.1,0.5l0.1,0.6l0.1,0.5l0.1,0.6l0.2,0.5l0.1,0.6l0.2,0.5
+             l0.1,0.5l0.2,0.5l0.2,0.5l0.2,0.5l0.2,0.5l0.2,0.5l0.2,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.5l0.3,0.4l0.3,0.5
+             l0.3,0.4L52,254l0.4,0.4l0.4,0.3l0.4,0.4l0.4,0.3l0.4,0.3l0.4,0.3l0.4,0.3l0.5,0.3l0.4,0.3l0.5,0.3l0.5,0.3l0.4,0.3l0.5,0.3l0.5,0.2
+             l0.5,0.2l0.5,0.2l0.6,0.2l0.5,0.2l0.5,0.2l0.5,0.2l0.6,0.1l0.5,0.2l0.6,0.1l0.5,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1
+             l0.6,0.1l0.6,0.1H68h0.6h0.6h0.6l0.6-0.1l0.6-0.1l0.6-0.1l0.6-0.1l0.6-0.1l0.6-0.1l0.6-0.1l0.6-0.1L75,260l0.6-0.1l0.5-0.2l0.6-0.2
+             l0.5-0.2l0.5-0.2l0.5-0.2l0.5-0.2l0.6-0.2l0.5-0.2l0.6-0.2l0.5-0.3l0.5-0.2l0.5-0.3l0.5-0.3l0.5-0.3l0.4-0.3l0.5-0.3l0.4-0.3
+             l0.4-0.3l0.5-0.3l0.4-0.3l0.5-0.3l0.4-0.3v-0.6v-0.6v-0.6v-0.5v-0.6V251v-0.6v-0.6v-0.6v-0.5v-0.6v-0.6v-0.6v-0.6V246v-0.6v-0.5
+             v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6V241v-0.6v-0.6v-0.6v-0.6v-0.6v-0.5v-0.6v-0.6V236z M95.6,259.9h0.6h0.6h0.6h0.6h0.6H99h0.6h0.6h0.6
+             h0.6h0.6l0.2-0.5l0.2-0.5l0.2-0.5l0.2-0.6l0.2-0.5l0.2-0.5l0.2-0.5l0.2-0.5l0.2-0.5l0.2-0.5l0.2-0.5l0.2-0.6l0.2-0.5l0.2-0.5
+             l0.2-0.5h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6
+             l0.2,0.5l0.2,0.5l0.2,0.5l0.2,0.6l0.2,0.5l0.2,0.5l0.2,0.5l0.2,0.5l0.2,0.5l0.2,0.5l0.2,0.5l0.2,0.6l0.2,0.5l0.2,0.5l0.2,0.5h0.6
+             h0.6h0.5h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6h0.5h0.6h0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5
+             l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5
+             l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5
+             l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6
+             l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5
+             l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.6l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.2-0.5
+             l-0.2-0.5L119,220l-0.2-0.5l-0.2-0.5l-0.2-0.5h-0.6h-0.5h-0.6h-0.6h-0.6h-0.5h-0.6h-0.6h-0.6h-0.5h-0.6h-0.6h-0.6h-0.5h-0.6h-0.6
+             H109h-0.5h-0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5
+             l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5
+             l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5
+             l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5
+             l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5
+             l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.6l-0.2,0.5l-0.2,0.5l-0.2,0.5H91h0.6h0.6h0.6h0.6
+             h0.6h0.6H95H95.6z M214.5,308.7H96l58,20L214.5,308.7z M224.5,250.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6H220h-0.6h-0.6h-0.6h-0.6
+             h-0.6h-0.6H216h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6
+             H203h-0.6V250v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6v-0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6h0.6
+             h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6V243v-0.5v-0.6v-0.6v-0.5v-0.6v-0.6v-0.6
+             v-0.5v-0.6v-0.6V237v-0.6v-0.6v-0.5v-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6H217h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6
+             h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6H208h-0.6h-0.5h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6H203h-0.6v-0.6v-0.6v-0.6v-0.6V232v-0.6v-0.5v-0.6
+             v-0.6v-0.6v-0.6v-0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6h0.6h0.6
+             h0.6h0.6h0.6h0.6h0.6h0.6h0.5h0.6h0.6h0.6h0.6h0.6h0.6v-0.6V227v-0.6v-0.6v-0.6v-0.5v-0.6v-0.6v-0.5v-0.6v-0.6v-0.5V221v-0.6v-0.6
+             v-0.5v-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6H218h-0.6h-0.6h-0.6h-0.5h-0.6h-0.6h-0.6h-0.6H213h-0.6h-0.6h-0.6
+             h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6H204h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.5H199h-0.6h-0.6h-0.6
+             h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6h-0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.5
+             v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6
+             v0.6v0.6v0.6v0.6v0.5v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6v0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6
+             h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6
+             h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6h0.6v-0.6v-0.5v-0.6v-0.6v-0.6v-0.5v-0.6v-0.6V255v-0.6
+             v-0.6v-0.5v-0.6v-0.6v-0.6v-0.5V250.6z M227.4,186.8h10.3c16.8,0,25.2-8.4,25.2-25.3v-31.7h-20.3v30.7c0,5.4-2.5,8-7.7,8h-3.9
+             c-5.4,0-7.9-2.5-7.9-8V74.6c0-5.4,2.5-8,7.9-8h3.5c5.2,0,7.7,2.5,7.7,8v26.6h20.3V73.4c0-16.9-8.1-25.1-25-25.1h-10.1
+             c-16.8,0-25.2,8.4-25.2,25.3v87.9C202.2,178.4,210.5,186.8,227.4,186.8z M263.4,246.6l-0.1-0.6l-0.1-0.6l-0.1-0.6l-0.1-0.6l-0.1-0.5
+             l-0.2-0.5l-0.2-0.5l-0.2-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.3-0.5l-0.4-0.4l-0.4-0.5l-0.5-0.4l-0.4-0.4l-0.4-0.3l-0.5-0.3l-0.4-0.3
+             l-0.5-0.3l-0.5-0.3l-0.6-0.3l-0.6-0.2l-0.6-0.3l-0.6-0.2l-0.5-0.2l-0.5-0.2l-0.6-0.2l-0.5-0.2l-0.6-0.2l-0.6-0.2l-0.6-0.1l-0.6-0.2
+             l-0.6-0.2l-0.6-0.1l-0.6-0.2l-0.6-0.2l-0.6-0.2l-0.6-0.1l-0.5-0.2l-0.5-0.1l-0.4-0.2l-0.4-0.1l-0.7-0.2l-0.6-0.2l-0.6-0.2l-0.4-0.3
+             l-0.5-0.3l-0.4-0.4l-0.2-0.3l-0.3-0.6l-0.1-0.7v-0.1l0.1-0.6l0.2-0.5l0.3-0.5l0.5-0.5l0.4-0.2l0.4-0.2l0.5-0.1l0.6-0.1l0.6-0.1h0.7
+             h0.6l0.5,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.2l0.6,0.2l0.6,0.2l0.5,0.2l0.5,0.2l0.4,0.2l0.5,0.2l0.4,0.2l0.5,0.2
+             l0.5,0.3l0.5,0.2l0.5,0.3l0.4,0.3l0.5,0.3l0.5,0.3l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5
+             l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l0.3-0.5l-0.4-0.3l-0.4-0.3l-0.5-0.3l-0.4-0.3l-0.5-0.3l-0.4-0.3l-0.5-0.3
+             l-0.5-0.3l-0.4-0.2l-0.5-0.3l-0.6-0.2l-0.5-0.2l-0.5-0.2l-0.5-0.2l-0.6-0.2l-0.5-0.1l-0.5-0.2l-0.6-0.2l-0.5-0.1l-0.6-0.1l-0.6-0.1
+             l-0.5-0.1l-0.6-0.1l-0.6-0.1l-0.6-0.1l-0.6-0.1h-0.6l-0.6-0.1l-0.6-0.1h-0.6h-0.6h-0.6h-0.6l-0.6,0.1l-0.6,0.1l-0.6,0.1l-0.6,0.1
+             l-0.5,0.1l-0.6,0.1l-0.5,0.1l-0.5,0.1l-0.4,0.1l-0.5,0.2l-0.6,0.2l-0.6,0.2l-0.5,0.2l-0.5,0.3l-0.5,0.2l-0.5,0.3l-0.4,0.3l-0.4,0.3
+             l-0.5,0.3l-0.4,0.3l-0.5,0.4l-0.4,0.5l-0.4,0.4l-0.4,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.3,0.5l-0.2,0.5l-0.2,0.5l-0.2,0.5l-0.1,0.5
+             l-0.2,0.5l-0.1,0.5l-0.1,0.5l-0.1,0.6l-0.1,0.5l-0.1,0.6v0.6v0.1v0.6l0.1,0.6l0.1,0.6l0.1,0.6l0.1,0.5l0.1,0.6l0.2,0.5l0.2,0.5
+             l0.2,0.5l0.2,0.4l0.3,0.5l0.3,0.5l0.3,0.4l0.3,0.4l0.3,0.4l0.4,0.4l0.4,0.4l0.4,0.3l0.5,0.3l0.4,0.3l0.5,0.3l0.5,0.3l0.6,0.3
+             l0.5,0.3l0.6,0.2l0.6,0.2l0.6,0.2l0.6,0.2l0.5,0.2l0.5,0.2l0.5,0.2l0.6,0.1l0.5,0.2l0.6,0.2l0.6,0.1l0.6,0.2l0.6,0.1l0.6,0.2
+             l0.6,0.1l0.6,0.2l0.6,0.1l0.6,0.2l0.5,0.1l0.5,0.2l0.4,0.1l0.4,0.1l0.7,0.3l0.6,0.2l0.5,0.2l0.4,0.2l0.5,0.3l0.4,0.3l0.3,0.4
+             l0.2,0.6l0.1,0.7v0.1l-0.1,0.6l-0.2,0.5l-0.2,0.5l-0.3,0.4l-0.5,0.3l-0.4,0.2l-0.5,0.2l-0.5,0.1l-0.5,0.1l-0.6,0.1l-0.6,0.1h-0.7
+             h-0.6l-0.6-0.1h-0.6l-0.6-0.1l-0.6-0.1l-0.6-0.1l-0.6-0.1l-0.6-0.1l-0.5-0.2l-0.6-0.2l-0.6-0.2l-0.5-0.2l-0.5-0.2l-0.5-0.2l-0.5-0.2
+             l-0.5-0.2l-0.4-0.3l-0.5-0.2l-0.4-0.3l-0.5-0.3l-0.5-0.3l-0.5-0.3l-0.5-0.3l-0.5-0.3l-0.4-0.3l-0.3,0.5l-0.4,0.4l-0.3,0.5l-0.4,0.5
+             l-0.3,0.4l-0.3,0.5l-0.4,0.5l-0.3,0.4l-0.4,0.5l-0.3,0.4l-0.4,0.5l-0.3,0.5l-0.3,0.4l-0.4,0.5l-0.3,0.5l-0.4,0.4l-0.3,0.5l0.4,0.4
+             l0.4,0.3l0.4,0.3l0.5,0.3l0.4,0.3l0.4,0.3l0.5,0.3l0.4,0.3l0.5,0.3l0.4,0.3l0.5,0.3l0.5,0.2l0.5,0.3l0.5,0.2l0.5,0.2l0.6,0.2
+             l0.5,0.2l0.6,0.2l0.5,0.2l0.6,0.2l0.6,0.2l0.5,0.1l0.6,0.2l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1l0.6,0.1
+             l0.6,0.1h0.6l0.6,0.1h0.6h0.6h0.6h0.6l0.6-0.1l0.6-0.1l0.6-0.1l0.5-0.1l0.6-0.1l0.6-0.1l0.5-0.1l0.5-0.1l0.6-0.1l0.5-0.2l0.6-0.2
+             l0.6-0.2l0.6-0.2l0.6-0.2l0.5-0.3l0.5-0.2l0.5-0.3l0.4-0.3l0.4-0.3l0.5-0.3l0.4-0.3l0.5-0.4l0.3-0.3l0.4-0.4l0.3-0.4l0.3-0.5
+             l0.3-0.5l0.3-0.5l0.3-0.5l0.2-0.5l0.2-0.5l0.2-0.5l0.2-0.6l0.1-0.5l0.2-0.6l0.1-0.6l0.1-0.6l0.1-0.6l0.1-0.6v-0.6v-0.1V246.6z"/>
+          </g>
+</symbol>
+
+<symbol id="steam" viewBox="0 0 24 24">
+  <g>
+          <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C7.4,22 3.55,18.92 2.36,14.73L6.19,16.31C6.45,17.6 7.6,18.58 8.97,18.58C10.53,
+          18.58 11.8,17.31 11.8,15.75V15.62L15.2,13.19H15.28C17.36,13.19 19.05,11.5 19.05,9.42C19.05,7.34 17.36,5.65 15.28,5.65C13.2,5.65 11.5,
+          7.34 11.5,9.42V9.47L9.13,12.93L8.97,12.92C8.38,12.92 7.83,13.1 7.38,13.41L2,11.2C2.43,6.05 6.73,2 12,2M8.28,17.17C9.08,17.5 10,
+          17.13 10.33,16.33C10.66,15.53 10.28,14.62 9.5,14.29L8.22,13.76C8.71,13.58 9.26,13.57 9.78,13.79C10.31,14 10.72,14.41 10.93,14.94C11.15,
+          15.46 11.15,16.04 10.93,16.56C10.5,17.64 9.23,18.16 8.15,17.71C7.65,17.5 7.27,17.12 7.06,16.67L8.28,17.17M17.8,9.42C17.8,10.81 16.67,11.94 15.28,
+          11.94C13.9,11.94 12.77,10.81 12.77,9.42A2.5,2.5 0 0,1 15.28,6.91C16.67,6.91 17.8,8.04 17.8,9.42M13.4,9.42C13.4,10.46 14.24,11.31 15.29,11.31C16.33,
+          11.31 17.17,10.46 17.17,9.42C17.17,8.38 16.33,7.53 15.29,7.53C14.24,7.53 13.4,8.38 13.4,9.42Z" />
+      </g>
+</symbol>
+
+<symbol id="mygames" viewBox="0 -104 512.00085 512">
+  <g>
+          <path d="m510.296875 225.53125-34.320313-145.84375c-9.242187-39.289062-45.457031-79.6875-100.605468-79.6875h-238.738282c-40.363281 0-87.980468 26.003906-100.609374 
+          79.6875l-34.320313 145.84375c-9.316406 39.589844 20.734375 77.570312 61.457031 77.570312 17.304688 0 33.582032-9.21875 
+          42.476563-24.050781l26.4375-44.054687c4.519531-7.539063 12.785156-12.21875 21.574219-12.21875h204.699218c8.789063 0 17.058594 4.683594 21.578125 12.222656l26.433594
+           44.046875c8.898437 14.835937 25.175781 24.054687 42.5 24.054687 40.660156 0 70.761719-37.941406 61.4375-77.570312zm-318.554687-99.144531h-17.132813v17.132812c0 
+           8.28125-6.714844 14.996094-15 14.996094-8.28125 0-14.996094-6.714844-14.996094-14.996094v-17.132812h-17.132812c-8.28125 0-14.996094-6.714844-14.996094-14.996094 
+           0-8.285156 6.714844-15 14.996094-15h17.132812v-17.132813c0-8.28125 6.714844-14.996093 14.996094-14.996093 8.285156 0 15 6.714843 15 14.996093v17.132813h17.132813c8.28125
+            0 14.996093 6.714844 14.996093 15 0 8.28125-6.714843 14.996094-14.996093 14.996094zm128.515624 0c-8.277343 0-14.996093-6.71875-14.996093-14.996094 0-8.28125 6.722656-15
+             14.996093-15 8.28125 0 15 6.71875 15 15 0 8.277344-6.71875 14.996094-15 14.996094zm32.132813 32.128906c-8.277344 0-15-6.71875-15-14.996094 0-8.277343 6.722656-15 
+             15-15s14.996094 6.722657 14.996094 15c0 8.277344-6.71875 14.996094-14.996094 14.996094zm0-64.257813c-8.277344 0-15-6.71875-15-15 0-8.277343 
+             6.722656-14.996093 15-14.996093s14.996094 6.71875 14.996094 14.996093c0 8.28125-6.71875 15-14.996094 15zm32.128906 32.128907c-8.277343 0-15-6.71875-15-14.996094 
+             0-8.28125 6.722657-15 15-15 8.277344 0 14.996094 6.71875 14.996094 15 0 8.277344-6.71875 14.996094-14.996094 14.996094zm0 0" />
+      </g>
+</symbol>
+</svg>
+
+  <!-- Header -->
+
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container">
+
+      <div class="header-top" id="header-top">
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo-1.png" alt="">
+          </a>
+        </div>
+        <div class="burger" type='button' id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        </div>
+
+        <div class="header-content">
+          <div class="header-content__title">
+            The best top of games
+          </div>
+          <div class="header-content__btn">
+            <a href="#">Subscribe</a>
+          </div>
+        </div>
+
+      </div>
+      <nav class="menu" id="menu">
+          <div class="container container-menu">
+            <div class="close-btn" id="close-btn"></div>
+              <div class="menu__list">
+                <ul>
+                  <li><a href="#" data-scroll="#home">HOME</a></li>
+                  <li><a href="#" data-scroll="#features">Features</a></li>
+                  <li><a href="#" data-scroll="#top">Top</a></li>
+                  <li><a href="#" data-scroll="#games">Games</a></li>
+                  <li><a href="#" data-scroll="#reviews">Reviews</a></li>
+                  <li><a href="#" data-scroll="#development">Development</a></li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+  </header>
+
+  <div class="intro" id="home">
+        
+      <div class="slider">
+
+        <div class="slider__item" style="background-image: url(images/slider2.jpg);"></div>
+        <div class="slider__item" style="background-image: url(images/slider1.jpg);"></div>
+        <div class="slider__item" style="background-image: url(images/slider3.jpg);"></div>
+
+      </div>
+  
+    </div>
+
+      <section class="features" id="features">
+      <img class="features-background" src="images/features.png" alt="">
+      <div class="container">
+        <div class="features__content">
+          <div class="features__item" data-aos="fade-right" data-aos-delay="200">
+            <div class="item-icon">
+              <img src="images/computer-icon.png" alt="">
+            </div>
+            <div class="item-about">
+              <div class="about-title">Computer</div>
+              <div class="about-text">
+                We have many games for Computer,
+                which are very interesting and exciting.
+              </div>
+            </div>
+          </div>
+          <div class="features__item" data-aos="fade-left" data-aos-delay="200">
+            <div class="item-icon">
+              <img src="images/playstation-icon.png" alt="">
+            </div>
+            <div class="item-about">
+              <div class="about-title">PlayStation</div>
+              <div class="about-text">
+                We have many games for PlayStation,
+                which are very interesting and exciting.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="topgames" id="top"> 
+      <div class="container">
+        <h1 data-aos="fade-up" data-aos-delay="200">Top Games</h1>
+        <div class="tgames-1">
+            <div class="tgames__game-1"  data-aos="fade-right" data-aos-delay="200">
+              <div class="game-name-1">
+                <img src="images/fortnite-logo.png" alt="">
+                <div class="name-1">Fortnite</div>
+              </div>
+              <div class="game-foto-1">
+                  <div class="text">Top #1</div>
+                  <div class="game-img">
+                    <img src="images/fortnite.png" alt="">
+                  </div>
+              </div>
+                <div class="social" data-aos="fade-right" data-aos-delay="200">
+                  <a class='social__item' href="#" target="_blank">
+                      <svg class="social__icon">
+                          <use xlink:href='#epicgames'></use>
+                      </svg>
+                  </a>
+                  <a class='social__item' href="#" target="_blank">
+                         <svg class="social__icon">
+                             <use xlink:href='#twitter'></use>
+                         </svg>
+                 </a>
+                 <a class='social__item' href="#" target="_blank">
+                             <svg class="social__icon">
+                                 <use xlink:href='#facebook'></use>
+                             </svg>
+                 </a>
+             </div>
+              </div>
+                <div class="tgames__text-1" data-aos="fade-left" data-aos-delay="200">
+                    <div class="game-about-1">
+                        <span>Fortnite</span> is an online video game developed by Epic Games.
+                        It is available in three distinct game mode versions that 
+                        otherwise share the same general gameplay and game engine:<br> 
+                                                      <span>①  Fortnite: Save the World -</span>
+                        a cooperative shooter-survival game 
+                        for up to four players to fight off zombie-like creatures and 
+                        defend objects with fortifications they can build;<br> 
+                                                      <span>②  Fortnite Battle Royale -</span> 
+                        a free-to-play battle royale game where up to 100 players fight 
+                        to be the last person standing;<br> 
+                                                      <span>③  Fortnite Creative -</span>
+                         where players are given complete freedom to create worlds or
+                         battle arenas. 
+                        Save the World is available only for Windows, macOS, 
+                        PlayStation 4, and Xbox One, iOS and Android devices.
+                    </div>
+                    <div class="game-dev">
+                        Developer: <span>Epic Games</span>.         
+                    </div>
+                </div>
+          </div>
+        <div class="tgames-2">
+          <div class="tgames__text-2" data-aos="fade-right" data-aos-delay="200">
+              <div class="game-about-2">
+              <span>Destiny 2</span> is a free-to-play online-only multiplayer first-person
+              shooter video game developed by Bungie. It was released for 
+              PlayStation 4 and Xbox One on September 6, 2017, followed 
+              by a Microsoft Windows version the following month.[1][2] 
+              The game was published by Activision until December 31 
+              2018 [3], when Bungie acquired the publishing rights to the 
+              franchise. Set in a "mythic science fiction" world, the game 
+              features a multiplayer "shared-world" environment with 
+              elements of role-playing games. Like the original, activities in 
+              Destiny 2 are divided among player versus environment (PvE) 
+              and player versus player (PvP) game types. In addition to 
+              normal story missions, PvE features three-player "strikes" and 
+              six-player raids. A free roam patrol mode is also available for
+              each planet and features public events as well as new 
+              activities not featured in the original.ces.
+              </div>
+              <div class="game-dev">
+                  Developer: <span>Bungie</span>.
+              </div>
+          </div>
+          <div class="tgames__game-2" data-aos="fade-left" data-aos-delay="200">
+            <div class="game-name-2">
+              <img src="images/destiny2-logo.png" alt="">
+              <div class="name-2">Destiny 2</div>
+            </div>
+            <div class="game-foto-2">
+                <div class="text">Top #2</div>
+                <div class="game-img">
+                  <img src="images/destiny2.png" alt="">
+                </div>
+              </div>
+              <div class="social" data-aos="fade-left" data-aos-delay="200">
+                <a class='social__item' href="#" target="_blank">
+                    <svg class="social__icon">
+                        <use xlink:href='#steam'></use>
+                    </svg>
+                </a>
+                <a class='social__item' href="#" target="_blank">
+                       <svg class="social__icon">
+                           <use xlink:href='#twitter'></use>
+                       </svg>
+               </a>
+               <a class='social__item' href="#" target="_blank">
+                           <svg class="social__icon">
+                               <use xlink:href='#facebook'></use>
+                           </svg>
+               </a>
+           </div>
+          </div>
+        </div>
+        <div class="tgames-3">
+          <div class="tgames__game-3" data-aos="fade-right" data-aos-delay="200">
+            <div class="game-name-3">
+              <img src="images/lostark-logo.png" alt="">
+              <div class="name-3">Lostark</div>
+            </div>
+            <div class="game-foto-3">
+                <div class="text">Top #3</div>
+                <div class="game-img">
+                  <img src="images/lostark.png" alt="">
+                </div>
+            </div>
+            <div class="social" data-aos="fade-right" data-aos-delay="200">
+              <a class='social__item' href="#" target="_blank">
+                  <svg class="social__icon">
+                      <use xlink:href='#mygames'></use>
+                  </svg>
+              </a>
+              <a class='social__item' href="#" target="_blank">
+                     <svg class="social__icon">
+                         <use xlink:href='#twitter'></use>
+                     </svg>
+             </a>
+             <a class='social__item' href="#" target="_blank">
+                         <svg class="social__icon">
+                             <use xlink:href='#facebook'></use>
+                         </svg>
+             </a>
+         </div>
+            </div>
+              <div class="tgames__text-3" data-aos="fade-left" data-aos-delay="200">
+                  <div class="game-about-3">
+                      <span>Lost Ark</span> from Smilegate RPG is a 3d fantasy MMORPG with 
+                      action RPG style combat and a huge world to explore. 
+                      Using the Unreal engine, the game features a beautifully 
+                      illustrated world of epic proportions. Set sail on your own ship 
+                      to discover new regions and battle powerful bosses with a raid 
+                      party. Lost Ark offers a rich gaming experience combined with 
+                      stunning visuals and skill effects. Enter the unique fantasy 
+                      world where the East meets the West.
+                      Players will even be able to discover unique islands in Lost Ark 
+                      as they explore the World Map abroad their own Ships.
+                      Lost Ark is currently in Korean Closed Beta but hoped to be 
+                      released in 2018 internationally!
+                  </div>
+                  <div class="game-dev">
+                      Developer: <span>Smilegate</span>.
+                  </div>
+              </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="other__games" id="games">
+    <div class="or-text" data-aos="fade-up" data-aos-delay="200">
+        <h1>Other Games</h1>
+        <div class="o-text">Some other games, which are very great too</div>
+    </div>
+    <div class="other-g" data-aos="fade-in" data-aos-delay="200">
+      <div class="other-item">
+        <img src="images/pathofexile-game.png" alt="">
+        <div class="games__content">
+            <div class="games__title">Path Of Exile</div>
+                <div class="games__text">User Interface Design</div>
+        </div>
+      </div>
+      <div class="other-item">
+        <img class="games__photo" src="images/bdo-game.png" alt="">
+        <div class="games__content">
+          <div class="games__title">Black Desert Online</div>
+              <div class="games__text">User Interface Design</div>
+      </div>
+      </div>
+      <div class="other-item">
+        <img class="games__photo" src="images/odyssey-game.png" alt="">
+        <div class="games__content">
+          <div class="games__title">Assassin's Creed Odyssey</div>
+              <div class="games__text">User Interface Design</div>
+      </div>
+      </div>
+      <div class="other-item">
+        <img class="games__photo" src="images/subbelz-game.png" alt="">
+        <div class="games__content">
+          <div class="games__title">Subnautica Below Zero</div>
+              <div class="games__text">User Interface Design</div>
+      </div>
+      </div>
+      <div class="other-item">
+        <img class="games__photo" src="images/wolcen-game.png" alt="">
+        <div class="games__content">
+          <div class="games__title">Wolcen Lords of Mayhem</div>
+              <div class="games__text">User Interface Design</div>
+      </div>
+      </div>
+      <div class="other-item">
+        <img class="games__photo" src="images/dota2-game.png" alt="">
+        <div class="games__content">
+          <div class="games__title">Dota 2</div>
+              <div class="games__text">User Interface Design</div>
+      </div>
+      </div>
+      <div class="other-item">
+        <img class="games__photo" src="images/readdead-game.png" alt="">
+        <div class="games__content">
+          <div class="games__title">Red Dead Redemtion ||</div>
+              <div class="games__text">User Interface Design</div>
+      </div>
+      </div>
+      <div class="other-item">
+        <img class="games__photo" src="images/sixsiege-game.png" alt="">
+        <div class="games__content">
+          <div class="games__title">Tom Clancy's Rainbow Six Siege</div>
+              <div class="games__text">User Interface Design</div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h1 data-aos="fade-up" data-aos-delay="200">What people say about us</h1>
+      <div class="reviews__content">
+        <div class="reviews__item" data-aos="fade-right" data-aos-delay="200">
+        <div class="reviews-text">
+          <div class="lapki">“</div>
+          <div class="text">
+            It’s really the best top of games!
+            There are a lot of very interesting games.
+            And i think there are games for everyone. 
+          </div>
+          <div class="reviews-foto">
+            <img src="images/customer-3.jpg" alt="">
+            <div class="foto-text">Milton Chapman</div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews__item" data-aos="fade-left" data-aos-delay="200">
+        <div class="reviews-text">
+          <div class="lapki">“</div>
+          <div class="text">
+            It’s really the best top of games!
+            There are a lot of very interesting games.
+            And i think there are games for everyone. 
+          </div>
+          <div class="reviews-foto">
+            <img src="images/customer-2.jpg" alt="">
+            <div class="foto-text">Joana Silva</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cards" id="development">
+    <h1 data-aos="fade-up" data-aos-delay="200">Development</h1>
+    <div class="container">
+      <div class="card" data-aos="fade-down-right" data-aos-delay="200">
+        <div class="face face1">
+          <div class="content">
+            <img src="images/design.png" alt="">
+            <h3>Design</h3>
+          </div>
+        </div> 
+        <div class="face face2">
+            <div class="content">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+                  <a href="#">Read More</a>
+            </div>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-down" data-aos-delay="200">
+          <div class="face face1">
+            <div class="content">
+              <img src="images/code.png" alt="">
+              <h3>Code</h3>
+            </div>
+          </div> 
+          <div class="face face2">
+              <div class="content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                   Et voluptas maxime porro reprehenderit, ducimus praesentium.</p>
+                    <a href="#">Read More</a>
+              </div>
+          </div>
+        </div>
+        <div class="card" data-aos="fade-down-left" data-aos-delay="200">
+            <div class="face face1">
+              <div class="content">
+                <img src="images/launch.png" alt="">
+                <h3>Launch</h3>
+              </div>
+            </div> 
+            <div class="face face2">
+                <div class="content">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                     Et voluptas maxime porro reprehenderit, ducimus praesentium.</p>
+                      <a href="#">Read More</a>
+                </div>
+            </div>
+          </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__item" data-aos="fade-right" data-aos-delay="200">
+          <h2 class="footer-title">About TGames</h2>
+          <div class="item-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing
+            lit. Maxime repellat delectus distinctio,
+            exercitationem beatae aut.
+          </div>
+        </div>
+        <div class="footer__item" data-aos="zoom-in" data-aos-delay="200">
+          <h2 class="footer-title">Share With Love</h2>
+          <div class="social social--footer">
+            <a class='social__item' href="#" target="_blank">
+                <svg class="social__icon">
+                    <use xlink:href='#facebook'></use>
+                </svg>
+            </a>
+            <a class='social__item' href="#" target="_blank">
+                   <svg class="social__icon">
+                       <use xlink:href='#twitter'></use>
+                   </svg>
+           </a>
+           <a class='social__item' href="#" target="_blank">
+                       <svg class="social__icon">
+                           <use xlink:href='#linkedin'></use>
+                       </svg>
+           </a>
+       </div>
+        </div>
+        <div class="footer__item" data-aos="fade-left" data-aos-delay="200">
+          <h2 class="footer-title">If you want to subscribe:</h2>
+          <div class="footer__sub">
+          <div class="footer-form">
+            <input type="text" name="name" id="name" placeholder="Your Email" required>
+          </div>
+          <a href="">Subscribe</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <section class="copyright">
+    <div class="container">
+      <div class="copyright__text">
+        <div>Copyright © 2020 TGames. All Rights Reserved</div>
+        <div>Made <span>by Kormylo Vitaliy</span></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/aos.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/slick.min.js"></script>
+  
+</body>
+
+
+</html>
+
+<!-- <nav class="menu">
+  <ul class="menu__list">
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">ABOUT US</a></li>
+    <li><a href="#">TOP</a></li>
+    <li><a href="#">GAMES</a></li>
+    <li><a href="#">REVIEWS</a></li>
+  </ul>
+</nav> -->

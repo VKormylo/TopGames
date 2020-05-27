@@ -1478,6 +1478,12 @@ h1{
     }
 }
 
+@media (max-height: 380px) {
+    .features__content {
+        top: 325px;
+    }
+}
+
 @media (max-height: 340px) {
     .features__content {
         top: 275px;
@@ -1654,9 +1660,6 @@ h1{
 }
 
 @media (max-width: 350px) {
-    .features__content {
-        top: 680px;
-    }
     .features__item .item-icon img{
         height: auto;
         width: 90px;

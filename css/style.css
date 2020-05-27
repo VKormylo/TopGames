@@ -1472,6 +1472,18 @@ h1{
     }
 }
 
+@media (max-height: 360px) {
+    .features__content {
+        top: 300px;
+    }
+}
+
+@media (max-height: 340px) {
+    .features__content {
+        top: 275px;
+    }
+}
+
 @media (max-width: 630px) {
     .features__item {
         margin: 0 10px;
@@ -1486,7 +1498,7 @@ h1{
 
 @media (max-width: 550px) {
     .features-background {
-        height: 550px;
+        height: 570px;
     }
     .features__content {
         margin-bottom: -40px;
@@ -1641,9 +1653,12 @@ h1{
     }
 }
 
-@media (max-width: 312px) {
+@media (max-width: 350px) {
+    .features__content {
+        top: 680px;
+    }
     .features__item .item-icon img{
         height: auto;
-        width: 80px;
+        width: 90px;
     }
 }

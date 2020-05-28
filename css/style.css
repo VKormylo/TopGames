@@ -1434,25 +1434,23 @@ h1{
 
 @media (max-height: 450px) {
     .header-content__title {
-        font-size: 30px;
-        margin-top: 10px;
+        font-size: 35px;
+        margin-top: 50px;
     }
     .header-content__btn {
         margin-top: 5px;
     }
-    .header-content__btn a {
-        font-size: 20px;
-        padding: 4px 15px;
-    }
+
 }
 
 @media (max-height: 400px) {
-
-
+    .header-content__title {
+        font-size: 35px;
+        margin-top: 20px;
+    }
     .slider .slick-dots {
         margin-top: -180px;
     }
-
     .slider .slick-dots button {
         width: 10px;
         height: 10px;
@@ -1470,23 +1468,15 @@ h1{
         font-size: 20px;
         padding: 4px 15px;
     }
-}
-
-@media (max-height: 360px) {
     .features__content {
-        top: 300px;
+        top: 345px;
     }
+    
 }
 
-@media (max-height: 400px) {
+@media (max-height: 350px) {
     .features__content {
-        top: 340px;
-    }
-}
-
-@media (max-height: 340px) {
-    .features__content {
-        top: 275px;
+        top: 290px;
     }
 }
 
